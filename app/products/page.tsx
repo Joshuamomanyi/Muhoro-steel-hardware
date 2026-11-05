@@ -9,7 +9,7 @@ import { SiteHeader } from '@/components/site-header'
 import { ORDERING_PHONE_NUMBER, ORDERING_WHATSAPP_LINK } from '@/lib/contact-info'
 
 const whatsappLink = ORDERING_WHATSAPP_LINK
-const phoneLink = 'tel:+254743452807'
+const phoneLink = 'tel:+254720295266'
 
 export default function ProductsPage() {
 	const [category, setCategory] = useState('All products')
@@ -43,33 +43,39 @@ export default function ProductsPage() {
 		<main className="min-h-screen bg-muted text-foreground">
 			<SiteHeader />
 			<section className="bg-background px-4 pb-14 pt-36 sm:px-5 lg:px-8 lg:pb-14 lg:pt-44">
-				<div className="mx-auto max-w-7xl">
-					<p className="eyebrow">Best hardware in Juja & Thika Road</p>
-					<h1 className="section-title mt-3 max-w-3xl">Best hardware supplies.<br /><span className="text-accent">Quality steel and building materials.</span></h1>
-					<p className="mt-5 max-w-xl leading-7 text-muted-foreground">Find the best hardware in Juja, Thika Road, and Kiambu County for roofing sheets, steel, cement, pipes, and general building materials. Shop by category and get a quick quote from Muhoro Steel Hardware.</p>
-					<div className="mt-7 inline-flex w-full max-w-xs rounded-full border border-border bg-muted p-1 sm:w-auto" aria-label="Choose order type">
-						{(['retail', 'wholesale'] as OrderMode[]).map(mode => (
-							<button key={mode} type="button" aria-pressed={orderMode === mode} onClick={() => setOrderMode(mode)} className={`flex-1 rounded-full px-4 py-2.5 text-sm font-bold capitalize transition-colors sm:flex-none sm:px-5 ${orderMode === mode ? 'bg-steel text-white' : 'text-steel hover:bg-white'}`}>{mode}</button>
-						))}
+				<div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_1.2fr] lg:items-end">
+					<div>
+						<p className="max-w-xl text-lg leading-8 text-muted-foreground">Find the best hardware in Juja, Thika Road, and Kiambu County for roofing sheets, steel, cement, pipes, and general building materials. Shop by category and get a quick quote from Muhoro Steel Hardware.</p>
 					</div>
-					{orderMode === 'retail' && (
-						<p className="mt-3 max-w-2xl rounded border border-amber-200 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-950">
-							Retail prices change more often. Consistent, market-priced items are displayed on the retail tab. For products with updated or negotiated pricing, our team will confirm the final quote before dispatch.
-						</p>
-					)}
-					{orderMode === 'wholesale' && (
-						<div className="mt-3 max-w-2xl rounded border border-steel/20 bg-steel/5 p-4 text-sm leading-6 text-steel">
-							<p className="font-bold text-steel">Wholesale quotations & pricing change frequently and depend on product quantities ordered, site location, delivery arrangements (free or paid), and the type of vehicle required, including pickups, small lorries, and big lorries.</p>
-							<p className="mt-2">For tailored wholesale rates, call or WhatsApp us directly for a quote.</p>
-							<div className="mt-3 flex flex-wrap gap-3">
-								<a href={whatsappLink} className="inline-flex items-center gap-2 bg-whatsapp px-3 py-2 font-bold text-white"><MessageCircle size={16} /> WhatsApp</a>
-								<a href={phoneLink} className="inline-flex items-center gap-2 bg-steel px-3 py-2 font-bold text-white"><Phone size={16} /> Call {ORDERING_PHONE_NUMBER}</a>
-							</div>
+					<div>
+						<p className="eyebrow">Best hardware in Juja & Thika Road</p>
+						<h1 className="section-title mt-3 max-w-3xl">Best hardware supplies.<br /><span className="text-accent">Quality steel and building materials.</span></h1>
+					</div>
+					<div className="lg:col-span-2">
+						<div className="mt-7 inline-flex w-full max-w-xs rounded-full border border-border bg-muted p-1 sm:w-auto" aria-label="Choose order type">
+							{(['retail', 'wholesale'] as OrderMode[]).map(mode => (
+								<button key={mode} type="button" aria-pressed={orderMode === mode} onClick={() => setOrderMode(mode)} className={`flex-1 rounded-full px-4 py-2.5 text-sm font-bold capitalize transition-colors sm:flex-none sm:px-5 ${orderMode === mode ? 'bg-steel text-white' : 'text-steel hover:bg-white'}`}>{mode}</button>
+							))}
 						</div>
-					)}
-					<div className="mt-8 flex max-w-xl items-center gap-3 border-b-2 border-steel py-3">
-						<Search size={20} className="text-steel" />
-						<input value={query} onChange={event => setQuery(event.target.value)} placeholder="Search products" className="w-full bg-transparent outline-none placeholder:text-muted-foreground" />
+						{orderMode === 'retail' && (
+							<p className="mt-3 max-w-2xl rounded border border-amber-200 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-950">
+								Retail prices change more often. Consistent, market-priced items are displayed on the retail tab. For products with updated or negotiated pricing, our team will confirm the final quote before dispatch.
+							</p>
+						)}
+						{orderMode === 'wholesale' && (
+							<div className="mt-3 max-w-2xl rounded border border-steel/20 bg-steel/5 p-4 text-sm leading-6 text-steel">
+								<p className="font-bold text-steel">Wholesale quotations & pricing change frequently and depend on product quantities ordered, site location, delivery arrangements (free or paid), and the type of vehicle required, including pickups, small lorries, and big lorries.</p>
+								<p className="mt-2">For tailored wholesale rates, call or WhatsApp us directly for a quote.</p>
+								<div className="mt-3 flex flex-wrap gap-3">
+									<a href={whatsappLink} className="inline-flex items-center gap-2 bg-whatsapp px-3 py-2 font-bold text-white"><MessageCircle size={16} /> WhatsApp</a>
+									<a href={phoneLink} className="inline-flex items-center gap-2 bg-steel px-3 py-2 font-bold text-white"><Phone size={16} /> Call {ORDERING_PHONE_NUMBER}</a>
+								</div>
+							</div>
+						)}
+						<div className="mt-8 flex max-w-xl items-center gap-3 border-b-2 border-steel py-3">
+							<Search size={20} className="text-steel" />
+							<input value={query} onChange={event => setQuery(event.target.value)} placeholder="Search products" className="w-full bg-transparent outline-none placeholder:text-muted-foreground" />
+						</div>
 					</div>
 				</div>
 			</section>

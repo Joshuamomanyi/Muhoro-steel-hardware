@@ -6,9 +6,9 @@ import { HeroSlider } from '@/components/hero-slider'
 import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
 
-import { OPENING_HOURS, ORDERING_PHONE_NUMBER, ORDERING_WHATSAPP_LINK } from '@/lib/contact-info'
+import { INQUIRY_PHONE_NUMBER, INQUIRY_WHATSAPP_LINK, OPENING_HOURS } from '@/lib/contact-info'
 
-const whatsapp = ORDERING_WHATSAPP_LINK
+const whatsapp = INQUIRY_WHATSAPP_LINK
 
 const products = [
   { title: 'Structural Steel & Fabrication', icon: Hammer, image: '/Muhoro columns and pillars steel.jpeg', text: 'Reinforcement bars, hollow sections, welding supplies, and fabrication essentials for strong, lasting builds.', items: ['High-strength reinforcement steel', 'Square & rectangular hollow sections', 'Materials for gates, grills & frameworks'] },
@@ -26,9 +26,9 @@ export default function Home() {
         <HeroSlider />
         <div className="relative z-10 mx-auto grid w-full max-w-7xl gap-12 px-4 py-16 pb-[245px] sm:px-5 sm:pb-16 lg:grid-cols-2 lg:px-8 lg:py-28">
           <div className="max-w-2xl">
-            <p className="mb-6 flex items-center gap-3 text-xs font-bold uppercase tracking-[.18em] text-accent sm:text-sm"><span className="h-px w-8 bg-accent sm:w-10" /> Juja · Thika Road · Kiambu County</p>
-            <h1 className="font-display text-4xl font-black uppercase leading-[.94] tracking-tight text-balance sm:text-5xl lg:text-7xl">Best hardware in Juja.<br /><span className="text-accent">Quality steel & building materials.</span><br />Built to last.</h1>
-            <p className="mt-7 max-w-xl text-base leading-7 text-steel-foreground/80 sm:text-lg sm:leading-8">Your trusted source for the best hardware in Juja and Thika Road, with steel, roofing sheets, cement, pipes, and construction supplies for contractors, fundis, and homeowners.</p>
+            <p className="mb-6 flex items-center gap-3 text-xs font-bold uppercase tracking-[.18em] text-accent sm:text-sm"><span className="h-px w-8 bg-accent sm:w-10" /> Juja, Thika Road, Kiambu County, Nairobi</p>
+            <h1 className="font-display text-4xl font-black uppercase leading-[.94] tracking-tight text-balance sm:text-5xl lg:text-7xl">Juja hardware and steel supplies<br /><span className="text-accent">Affordable prices, trusted service.</span></h1>
+            <p className="mt-7 max-w-xl text-base leading-7 text-steel-foreground/80 sm:text-lg sm:leading-8">Looking for Juja hardware, a reliable steel dealer, or affordable prices in Juja and Thika Road? Muhoro Steel Hardware supplies roofing sheets, steel bars, cement, pipes, and building materials for homes, contractors, and developers across Kiambu, Nairobi, and the Mount Kenya region.</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a href={whatsapp} className="inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp px-5 py-3.5 font-bold text-white shadow-xl shadow-whatsapp/20 transition hover:brightness-110 sm:px-6">Chat on WhatsApp <ArrowRight size={18} /></a>
               <a href="/products" className="inline-flex items-center justify-center rounded-sm border border-white/40 px-5 py-3.5 font-bold text-white transition hover:border-white hover:bg-white/10 sm:px-6">View Products</a>
@@ -40,8 +40,8 @@ export default function Home() {
       <div className="overflow-hidden bg-accent text-white" aria-label="Store information">
         <div className="marquee-track flex w-max items-center py-4 text-sm font-semibold">
           {[0, 1].map(copy => <div key={copy} aria-hidden={copy === 1} className="flex items-center gap-12 px-6">
-            <span className="flex items-center gap-2"><MapPin size={17} /> Gatundu–Juja Road, Juja</span>
-            <span className="flex items-center gap-2"><Phone size={17} /> {ORDERING_PHONE_NUMBER}</span>
+            <span className="flex items-center gap-2"><MapPin size={17} /> Gatundu Juja Road, Juja</span>
+            <span className="flex items-center gap-2"><Phone size={17} /> {INQUIRY_PHONE_NUMBER}</span>
             <span>Retail and wholesale pricing available</span>
             <span>{OPENING_HOURS}</span><span aria-hidden="true">◆</span>
           </div>)}
@@ -51,7 +51,7 @@ export default function Home() {
       <section id="about" className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-5 lg:grid-cols-[.9fr_1.1fr] lg:px-8 lg:py-32">
         <div><p className="eyebrow">The Muhoro standard</p><h2 className="section-title mt-3">Your local partner for <span className="text-accent">serious builds.</span></h2></div>
         <div>
-          <p className="text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">Muhoro Steel Hardware Limited is a localized building materials supplier serving Juja and surrounding Kiambu County. We help contractors, fundis, and homeowners get the quality structural and hardware supplies they need — without the runaround.</p>
+          <p className="text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">Muhoro Steel Hardware is a trusted building materials supplier in Juja, Kiambu County, and Nairobi. We help homeowners, contractors, and developers source durable steel, roofing sheets, cement, hardware, and pipes with clear pricing and practical support.</p>
           <div className="mt-10 grid grid-cols-2 gap-6 border-t border-border pt-7 sm:grid-cols-4">{[['Local', 'Juja presence'], ['Wide', 'Product range'], ['Fast', 'Site delivery'], ['Fair', 'Pricing']].map(([title, text]) => <div key={title}><p className="font-display text-3xl font-bold text-steel">{title}</p><p className="mt-1 text-sm text-muted-foreground">{text}</p></div>)}</div>
           <a href="/about" className="mt-8 inline-flex items-center gap-2 text-sm font-bold text-steel hover:text-accent">About Muhoro <ArrowRight size={16} /></a>
         </div>
@@ -97,8 +97,8 @@ export default function Home() {
           <div>
             <p className="eyebrow">Start your next project</p><h2 className="section-title mt-3">Let&apos;s get your <span className="text-accent">materials moving.</span></h2>
             <div className="mt-10 space-y-5">
-              <a href="tel:+254743452807" className="flex items-start gap-4"><Phone className="mt-1 text-accent" size={20} /><span><strong className="block text-steel">{ORDERING_PHONE_NUMBER}</strong><span className="text-sm text-muted-foreground">Call or WhatsApp for a quick quote</span></span></a>
-              <div className="flex items-start gap-4"><MapPin className="mt-1 text-accent" size={20} /><span><strong className="block text-steel">Gatundu–Juja Road, Juja</strong><span className="text-sm text-muted-foreground">Kiambu County, Kenya</span></span></div>
+              <a href="tel:+254721270670" className="flex items-start gap-4"><Phone className="mt-1 text-accent" size={20} /><span><strong className="block text-steel">{INQUIRY_PHONE_NUMBER}</strong><span className="text-sm text-muted-foreground">Call or WhatsApp for a quick quote</span></span></a>
+              <div className="flex items-start gap-4"><MapPin className="mt-1 text-accent" size={20} /><span><strong className="block text-steel">Gatundu Juja Road, Juja</strong><span className="text-sm text-muted-foreground">Kiambu County, Kenya</span></span></div>
               <p className="pl-9 text-sm text-muted-foreground">Open {OPENING_HOURS}</p>
             </div>
             <a href="/contact" className="mt-10 inline-flex items-center gap-2 rounded-full bg-whatsapp px-7 py-4 font-bold text-white shadow-lg shadow-whatsapp/20 transition hover:brightness-110">Contact Muhoro <ArrowRight size={18} /></a>
@@ -106,7 +106,7 @@ export default function Home() {
           <div className="relative aspect-[3/2] min-h-[260px] overflow-hidden bg-steel sm:min-h-[320px]">
             <Image src="/Muhoro reception2.jpeg" alt="Muhoro Steel Hardware delivery truck" fill unoptimized className="object-cover object-[center_44%]" />
             <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(3,46,84,.94)_0%,rgba(3,46,84,.05)_78%)]" />
-            <div className="relative flex h-full min-h-[260px] flex-col justify-end p-6 text-white sm:min-h-[320px] sm:p-8"><p className="font-mono text-xs font-bold uppercase tracking-widest text-accent">Find us in Juja</p><p className="mt-2 max-w-xs font-display text-3xl font-bold uppercase leading-none">Gatundu–Juja Road</p><a href="https://maps.google.com/?q=Juja%20Kenya" target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-2 text-sm font-bold">Open in Google Maps <ArrowRight size={16} /></a></div>
+            <div className="relative flex h-full min-h-[260px] flex-col justify-end p-6 text-white sm:min-h-[320px] sm:p-8"><p className="font-mono text-xs font-bold uppercase tracking-widest text-accent">Find us in Juja</p><p className="mt-2 max-w-xs font-display text-3xl font-bold uppercase leading-none">Gatundu Juja Road</p><a href="https://maps.google.com/?q=Juja%20Kenya" target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-2 text-sm font-bold">Open in Google Maps <ArrowRight size={16} /></a></div>
           </div>
         </div>
       </section>

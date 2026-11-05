@@ -27,10 +27,14 @@ export default function BlogPage() {
     <main className="min-h-screen bg-background text-foreground">
       <SiteHeader />
       <section className="bg-muted px-5 pb-14 pt-36 lg:px-8 lg:pb-20 lg:pt-44">
-        <div className="mx-auto max-w-7xl">
-          <p className="eyebrow">Muhoro field notes</p>
-          <h1 className="section-title mt-3 max-w-4xl">Useful guidance for <span className="text-accent">the work ahead.</span></h1>
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-muted-foreground">Straightforward ideas for ordering materials, planning site deliveries, and keeping your next building task moving.</p>
+        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_1.2fr] lg:items-end">
+          <div>
+            <p className="max-w-2xl text-lg leading-8 text-muted-foreground">Straightforward ideas for ordering materials, planning site deliveries, and keeping your next building task moving.</p>
+          </div>
+          <div>
+            <p className="eyebrow">Muhoro field notes</p>
+            <h1 className="section-title mt-3 max-w-4xl">Useful guidance for <span className="text-accent">the work ahead.</span></h1>
+          </div>
         </div>
       </section>
       <section className="mx-auto max-w-7xl px-5 py-12 lg:px-8 lg:py-16" aria-label="Featured guide">
