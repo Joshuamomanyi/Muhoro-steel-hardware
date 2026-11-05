@@ -3,6 +3,7 @@
 import { jsPDF } from 'jspdf'
 import { Download, Minus, Plus, ShoppingCart, Trash2, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import { ORDERING_PHONE_NUMBER, ORDERING_WHATSAPP_NUMBER } from '@/lib/contact-info'
 import { getUnitPrice, getWholesaleMinimum, useCart, WHOLESALE_MINIMUM_QUANTITY } from './cart-context'
 import { ProductImage } from './product-image'
 
@@ -95,7 +96,7 @@ export function CartDrawer() {
     const note = pdf.splitTextToSize(pricingNote, 180)
     pdf.text(note, 14, y)
     y += note.length * 4 + 6
-    pdf.text('Contact: +254 721 270 670', 14, y)
+    pdf.text(`Contact: ${ORDERING_PHONE_NUMBER}`, 14, y)
     pdf.save(`${quoteNumber.toLowerCase()}-quotation.pdf`)
   }
 
@@ -171,7 +172,7 @@ export function CartDrawer() {
               <button onClick={downloadQuote} disabled={!customerName.trim() || !customerPhone.trim()} className="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-steel px-5 py-3 font-bold text-white disabled:cursor-not-allowed disabled:opacity-50">
                 <Download size={18} /> Download quote PDF
               </button>
-              <a href={`https://wa.me/254721270670?text=${encodeURIComponent(whatsappMessage)}`} target="_blank" rel="noreferrer" className="mt-3 flex justify-center rounded-full bg-whatsapp px-5 py-3 font-bold text-white">Order via WhatsApp</a>
+              <a href={`https://wa.me/${ORDERING_WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`} target="_blank" rel="noreferrer" className="mt-3 flex justify-center rounded-full bg-whatsapp px-5 py-3 font-bold text-white">Order via WhatsApp</a>
               <p className="mt-3 text-center text-xs leading-5 text-muted-foreground">{hasUnpricedWholesaleItems ? `Unpriced wholesale lines use listed prices as estimates; minimum ${WHOLESALE_MINIMUM_QUANTITY} units per product. ` : ''}Pricing automatically applies at each product&apos;s minimum order quantity. Price, quality specifications, availability, and delivery are confirmed by our team.</p>
             </div>
           )}

@@ -14,7 +14,7 @@ export function SiteFooter() {
           <a href="/why-muhoro" className="transition hover:text-white">Why Muhoro</a>
           <a href="/contact" className="transition hover:text-white">Contact</a>
           <a href="/blog" className="transition hover:text-white">News & Guides</a>
-          <a href="tel:+254721270670" className="transition hover:text-white">+254 721 270 670</a>
+          <a href="tel:+254713371822" className="transition hover:text-white">+254 713 371 822</a>
         </nav>
       </div>
       <div className="mx-auto mt-7 max-w-7xl border-t border-white/10 pt-5 text-xs text-white/40">

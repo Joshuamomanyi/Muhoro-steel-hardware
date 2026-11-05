@@ -6,7 +6,9 @@ import { HeroSlider } from '@/components/hero-slider'
 import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
 
-const whatsapp = 'https://wa.me/254721270670?text=Hi%2C%20I%27m%20interested%20in%20your%20steel%20and%20hardware%20products.'
+import { OPENING_HOURS, ORDERING_PHONE_NUMBER, ORDERING_WHATSAPP_LINK } from '@/lib/contact-info'
+
+const whatsapp = ORDERING_WHATSAPP_LINK
 
 const products = [
   { title: 'Structural Steel & Fabrication', icon: Hammer, image: '/Muhoro columns and pillars steel.jpeg', text: 'Reinforcement bars, hollow sections, welding supplies, and fabrication essentials for strong, lasting builds.', items: ['High-strength reinforcement steel', 'Square & rectangular hollow sections', 'Materials for gates, grills & frameworks'] },
@@ -39,9 +41,9 @@ export default function Home() {
         <div className="marquee-track flex w-max items-center py-4 text-sm font-semibold">
           {[0, 1].map(copy => <div key={copy} aria-hidden={copy === 1} className="flex items-center gap-12 px-6">
             <span className="flex items-center gap-2"><MapPin size={17} /> Gatundu–Juja Road, Juja</span>
-            <span className="flex items-center gap-2"><Phone size={17} /> +254 721 270 670</span>
+            <span className="flex items-center gap-2"><Phone size={17} /> {ORDERING_PHONE_NUMBER}</span>
             <span>Retail and wholesale pricing available</span>
-            <span>Mon–Fri, 9AM–5PM</span><span aria-hidden="true">◆</span>
+            <span>{OPENING_HOURS}</span><span aria-hidden="true">◆</span>
           </div>)}
         </div>
       </div>
@@ -95,9 +97,9 @@ export default function Home() {
           <div>
             <p className="eyebrow">Start your next project</p><h2 className="section-title mt-3">Let&apos;s get your <span className="text-accent">materials moving.</span></h2>
             <div className="mt-10 space-y-5">
-              <a href="tel:+254721270670" className="flex items-start gap-4"><Phone className="mt-1 text-accent" size={20} /><span><strong className="block text-steel">+254 721 270 670</strong><span className="text-sm text-muted-foreground">Call or WhatsApp for a quick quote</span></span></a>
+              <a href="tel:+254743452807" className="flex items-start gap-4"><Phone className="mt-1 text-accent" size={20} /><span><strong className="block text-steel">{ORDERING_PHONE_NUMBER}</strong><span className="text-sm text-muted-foreground">Call or WhatsApp for a quick quote</span></span></a>
               <div className="flex items-start gap-4"><MapPin className="mt-1 text-accent" size={20} /><span><strong className="block text-steel">Gatundu–Juja Road, Juja</strong><span className="text-sm text-muted-foreground">Kiambu County, Kenya</span></span></div>
-              <p className="pl-9 text-sm text-muted-foreground">Open Monday to Friday, 9AM–5PM</p>
+              <p className="pl-9 text-sm text-muted-foreground">Open {OPENING_HOURS}</p>
             </div>
             <a href="/contact" className="mt-10 inline-flex items-center gap-2 rounded-full bg-whatsapp px-7 py-4 font-bold text-white shadow-lg shadow-whatsapp/20 transition hover:brightness-110">Contact Muhoro <ArrowRight size={18} /></a>
           </div>

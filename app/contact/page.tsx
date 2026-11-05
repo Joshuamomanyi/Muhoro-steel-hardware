@@ -3,8 +3,9 @@ import { ArrowRight, Clock3, MapPin, MessageCircle, Phone } from 'lucide-react'
 import type { Metadata } from 'next'
 import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
+import { INQUIRY_PHONE_NUMBER, INQUIRY_WHATSAPP_LINK, OPENING_HOURS } from '@/lib/contact-info'
 
-const whatsapp = 'https://wa.me/254721270670?text=Hi%2C%20I%27d%20like%20to%20ask%20about%20building%20materials.'
+const whatsapp = INQUIRY_WHATSAPP_LINK
 
 export const metadata: Metadata = {
   title: 'Contact Muhoro Steel Hardware | Juja, Kiambu',
@@ -22,10 +23,10 @@ export default function ContactPage() {
         <div>
           <p className="eyebrow">Talk to Muhoro</p><h2 className="section-title mt-3">Real help, <span className="text-accent">close by.</span></h2>
           <div className="mt-8 space-y-6">
-            <a href="tel:+254721270670" className="flex items-start gap-4"><Phone className="mt-1 shrink-0 text-accent" size={21} /><span><strong className="block text-steel">+254 721 270 670</strong><span className="mt-1 block text-sm text-muted-foreground">Call for product enquiries and quotes</span></span></a>
+            <a href="tel:+254713371822" className="flex items-start gap-4"><Phone className="mt-1 shrink-0 text-accent" size={21} /><span><strong className="block text-steel">{INQUIRY_PHONE_NUMBER}</strong><span className="mt-1 block text-sm text-muted-foreground">Call for product enquiries and quotes</span></span></a>
             <a href={whatsapp} target="_blank" rel="noreferrer" className="flex items-start gap-4"><MessageCircle className="mt-1 shrink-0 text-accent" size={21} /><span><strong className="block text-steel">Chat on WhatsApp</strong><span className="mt-1 block text-sm text-muted-foreground">Share your materials list or question</span></span></a>
             <div className="flex items-start gap-4"><MapPin className="mt-1 shrink-0 text-accent" size={21} /><span><strong className="block text-steel">Gatundu–Juja Road, Juja</strong><span className="mt-1 block text-sm text-muted-foreground">Kiambu County, Kenya</span></span></div>
-            <div className="flex items-start gap-4"><Clock3 className="mt-1 shrink-0 text-accent" size={21} /><span><strong className="block text-steel">Monday to Friday, 9AM–5PM</strong><span className="mt-1 block text-sm text-muted-foreground">Please confirm holiday hours by phone.</span></span></div>
+            <div className="flex items-start gap-4"><Clock3 className="mt-1 shrink-0 text-accent" size={21} /><span><strong className="block text-steel">{OPENING_HOURS}</strong><span className="mt-1 block text-sm text-muted-foreground">Please confirm holiday hours by phone.</span></span></div>
           </div>
           <a href={whatsapp} target="_blank" rel="noreferrer" className="mt-9 inline-flex items-center gap-2 rounded-full bg-whatsapp px-6 py-3.5 font-bold text-white shadow-lg shadow-whatsapp/20 transition hover:brightness-110">Send us a WhatsApp <ArrowRight size={17} /></a>
         </div>

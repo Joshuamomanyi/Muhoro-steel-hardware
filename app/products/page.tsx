@@ -6,9 +6,10 @@ import { getUnitPrice, getWholesaleMinimum, useCart, type OrderMode } from '@/co
 import { ProductImage } from '@/components/product-image'
 import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
+import { ORDERING_PHONE_NUMBER, ORDERING_WHATSAPP_LINK } from '@/lib/contact-info'
 
-const whatsappLink = 'https://wa.me/254721270670?text=Hi%2C%20I%27m%20interested%20in%20your%20wholesale%20steel%20and%20hardware%20pricing.'
-const phoneLink = 'tel:+254721270670'
+const whatsappLink = ORDERING_WHATSAPP_LINK
+const phoneLink = 'tel:+254743452807'
 
 export default function ProductsPage() {
 	const [category, setCategory] = useState('All products')
@@ -62,7 +63,7 @@ export default function ProductsPage() {
 							<p className="mt-2">For tailored wholesale rates, call or WhatsApp us directly for a quote.</p>
 							<div className="mt-3 flex flex-wrap gap-3">
 								<a href={whatsappLink} className="inline-flex items-center gap-2 bg-whatsapp px-3 py-2 font-bold text-white"><MessageCircle size={16} /> WhatsApp</a>
-								<a href={phoneLink} className="inline-flex items-center gap-2 bg-steel px-3 py-2 font-bold text-white"><Phone size={16} /> Call +254 721 270 670</a>
+								<a href={phoneLink} className="inline-flex items-center gap-2 bg-steel px-3 py-2 font-bold text-white"><Phone size={16} /> Call {ORDERING_PHONE_NUMBER}</a>
 							</div>
 						</div>
 					)}

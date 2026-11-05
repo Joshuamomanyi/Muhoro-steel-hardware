@@ -3,8 +3,7 @@
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 import { CartButton } from '@/components/cart-drawer'
-
-const whatsapp = 'https://wa.me/254721270670?text=Hi%2C%20I%27m%20interested%20in%20your%20steel%20and%20hardware%20products.'
+import { ORDERING_WHATSAPP_LINK } from '@/lib/contact-info'
 const links = [
   ['Home', '/'],
   ['About', '/about'],
@@ -29,9 +28,9 @@ export function SiteHeader() {
           {links.map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)} className="whitespace-nowrap text-sm font-semibold text-steel-foreground/80 transition hover:text-white">{label}</a>)}
         </nav>
         <div className="flex shrink-0 items-center gap-2">
-          <a href={whatsapp} className="hidden rounded-full bg-whatsapp px-3 py-2 text-xs font-bold text-white shadow-lg shadow-whatsapp/20 transition hover:brightness-110 sm:inline-flex lg:px-4 lg:py-2.5 lg:text-sm">WhatsApp</a>
+          <a href={ORDERING_WHATSAPP_LINK} className="hidden rounded-full bg-whatsapp px-3 py-2 text-xs font-bold text-white shadow-lg shadow-whatsapp/20 transition hover:brightness-110 sm:inline-flex lg:px-4 lg:py-2.5 lg:text-sm">WhatsApp</a>
           <CartButton />
-          <a href={whatsapp} className="hidden rounded-sm bg-accent px-3 py-2 text-xs font-bold text-white transition hover:bg-accent/90 sm:inline-flex lg:px-4 lg:py-2.5 lg:text-sm">Request quote</a>
+          <a href={ORDERING_WHATSAPP_LINK} className="hidden rounded-sm bg-accent px-3 py-2 text-xs font-bold text-white transition hover:bg-accent/90 sm:inline-flex lg:px-4 lg:py-2.5 lg:text-sm">Request quote</a>
           <button aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)} className="rounded-md p-2 text-steel-foreground xl:hidden">{menuOpen ? <X size={22} /> : <Menu size={22} />}</button>
         </div>
       </div>
