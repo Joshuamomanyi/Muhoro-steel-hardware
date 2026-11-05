@@ -19,8 +19,8 @@
 }
 :root { --radius: 0.2rem; }
 * { border-color: var(--color-border); }
-html { scroll-behavior: smooth; background: var(--color-background); }
-body { margin: 0; font-family: var(--font-sans); }
+html { scroll-behavior: smooth; background: var(--color-background); overflow-x: hidden; }
+body { margin: 0; font-family: var(--font-sans); overflow-x: hidden; }
 .font-display { font-family: var(--font-display); }
 .eyebrow { color: var(--color-steel); font-family: var(--font-mono); font-size: .72rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
 .section-title { font-family: var(--font-display); font-size: clamp(2.6rem, 6vw, 4.6rem); font-weight: 800; line-height: .96; text-transform: uppercase; letter-spacing: -.02em; text-wrap: balance; }
