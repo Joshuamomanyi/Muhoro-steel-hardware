@@ -7,7 +7,7 @@ const images = [
   '/Muhoro receptiona.jpeg',
   '/muhoro blue products.jpeg',
   '/Muhoro columns and pillars steel.jpeg',
-  '/Muhorosteel.jpeg',
+  '/muhoro2.jpeg',
   '/Muhoro iron sheets.jpeg',
   '/Muhoro cardboards.jpeg',
   '/Muhoro binding wire.jpeg',
@@ -22,7 +22,7 @@ const backgroundImages = [
   '/Muhoro General stores2.jpeg',
   '/Muhoro interior look.jpeg',
   '/Muhoro1.jpeg',
-  '/Muhorosteel.jpeg',
+  '/muhoro2.jpeg',
 ]
 
 export function HeroSlider() {

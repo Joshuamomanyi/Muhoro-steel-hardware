@@ -71,7 +71,7 @@ export function CartDrawer() {
     }
 
     for (const item of items) {
-      const description = pdf.splitTextToSize(`${item.name} — ${item.orderMode} (${item.quality.trim() || 'As listed'})`, 95)
+      const description = pdf.splitTextToSize(`${item.name} | ${item.orderMode} (${item.quality.trim() || 'As listed'})`, 95)
       addPageIfNeeded(Math.max(20, description.length * 5) + 5)
       pdf.setFont('helvetica', 'bold')
       pdf.text(description, 14, y)
@@ -102,7 +102,7 @@ export function CartDrawer() {
 
   const whatsappMessage = [
     `Hi Muhoro, I would like to order:`,
-    ...items.map(item => `${item.quantity}x ${item.name} — ${item.orderMode} — ${item.quality.trim() || 'As listed'} (${money(linePrice(item))} each${item.wholesalePrice !== null && item.quantity >= getWholesaleMinimum(item) ? ', wholesale price applied' : ''}${item.orderMode === 'wholesale' && item.wholesalePrice === null ? ', estimated wholesale price' : ''})`),
+    ...items.map(item => `${item.quantity}x ${item.name} | ${item.orderMode} | ${item.quality.trim() || 'As listed'} (${money(linePrice(item))} each${item.wholesalePrice !== null && item.quantity >= getWholesaleMinimum(item) ? ', wholesale price applied' : ''}${item.orderMode === 'wholesale' && item.wholesalePrice === null ? ', estimated wholesale price' : ''})`),
     `Estimated total: ${money(total)}`,
     customerName.trim() ? `Name: ${customerName.trim()}` : '',
     customerPhone.trim() ? `Phone: ${customerPhone.trim()}` : '',

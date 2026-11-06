@@ -43,13 +43,13 @@ export default function ProductsPage() {
 		<main className="min-h-screen bg-muted text-foreground">
 			<SiteHeader />
 			<section className="bg-background px-4 pb-14 pt-36 sm:px-5 lg:px-8 lg:pb-14 lg:pt-44">
-				<div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_1.2fr] lg:items-end">
-					<div>
-						<p className="max-w-xl text-lg leading-8 text-muted-foreground">Find the best hardware in Juja, Thika Road, and Kiambu County for roofing sheets, steel, cement, pipes, and general building materials. Shop by category and get a quick quote from Muhoro Steel Hardware.</p>
-					</div>
+				<div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-end">
 					<div>
 						<p className="eyebrow">Best hardware in Juja & Thika Road</p>
 						<h1 className="section-title mt-3 max-w-3xl">Best hardware supplies.<br /><span className="text-accent">Quality steel and building materials.</span></h1>
+					</div>
+					<div>
+						<p className="max-w-xl text-lg leading-8 text-muted-foreground">Find affordable prices in Juja, a trusted steel dealer in Kiambu, and a dependable hardware store on Thika Road for roofing sheets, steel, cement, pipes, and building materials. Shop by category and get a quick quote from Muhoro Steel Hardware.</p>
 					</div>
 					<div className="lg:col-span-2">
 						<div className="mt-7 inline-flex w-full max-w-xs rounded-full border border-border bg-muted p-1 sm:w-auto" aria-label="Choose order type">

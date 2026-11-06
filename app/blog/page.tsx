@@ -6,9 +6,9 @@ import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
 
 export const metadata: Metadata = {
-  title: 'Construction Guides & Building Tips | Muhoro Steel Hardware',
-  description: 'Helpful building-materials advice and practical site-planning guides from Muhoro Steel Hardware in Juja, Kiambu County.',
-  keywords: ['construction guides Kenya', 'building supplies Juja', 'steel hardware advice', 'material buying tips Kenya'],
+  title: 'Juja Building Tips, Materials Guides and Hardware Advice | Muhoro Steel Hardware',
+  description: 'Helpful Juja hardware, steel, and building materials advice for homeowners, contractors, and developers in Juja, Kiambu County, Nairobi, and Kenya.',
+  keywords: ['Juja hardware guide', 'construction guides Kenya', 'building supplies Juja', 'steel hardware advice', 'material buying tips Kenya', 'Thika Road hardware advice', 'Kiambu building materials'],
   alternates: { canonical: 'https://muhorosteelhardware.co.ke/blog' },
   openGraph: {
     title: 'Construction Guides & Building Tips | Muhoro Steel Hardware',
@@ -27,13 +27,13 @@ export default function BlogPage() {
     <main className="min-h-screen bg-background text-foreground">
       <SiteHeader />
       <section className="bg-muted px-5 pb-14 pt-36 lg:px-8 lg:pb-20 lg:pt-44">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_1.2fr] lg:items-end">
-          <div>
-            <p className="max-w-2xl text-lg leading-8 text-muted-foreground">Straightforward ideas for ordering materials, planning site deliveries, and keeping your next building task moving.</p>
-          </div>
+        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-end">
           <div>
             <p className="eyebrow">Muhoro field notes</p>
             <h1 className="section-title mt-3 max-w-4xl">Useful guidance for <span className="text-accent">the work ahead.</span></h1>
+          </div>
+          <div>
+            <p className="max-w-2xl text-lg leading-8 text-muted-foreground">Straightforward ideas for ordering materials, planning site deliveries, and keeping your next building task moving.</p>
           </div>
         </div>
       </section>

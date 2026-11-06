@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const reasons = [
   { icon: Boxes, title: 'A broad, practical range', text: 'Find structural steel, cement, roofing, plumbing, fabrication supplies, and everyday hardware for different stages of the job.' },
-  { icon: MapPin, title: 'A nearby team', text: 'We are based on Gatundu–Juja Road and serve customers across Juja and surrounding Kiambu County.' },
+  { icon: MapPin, title: 'A nearby team', text: 'We are based on Gatundu Juja Road and serve customers across Juja and surrounding Kiambu County.' },
   { icon: MessageCircle, title: 'Straight answers', text: 'Check availability, compare quantities, and discuss delivery directly with our team before placing an order.' },
   { icon: BadgeCheck, title: 'Built around real projects', text: 'Whether you are a contractor, fundi, or homeowner, we aim to make sourcing and ordering more straightforward.' },
 ]
