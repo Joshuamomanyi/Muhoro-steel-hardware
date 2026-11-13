@@ -16,8 +16,8 @@ export const articles: GuideArticle[] = [
     category: 'Materials guide',
     title: 'What to check before ordering structural steel',
     excerpt: 'A clear materials list helps your supplier quote accurately and keeps the order aligned with the build drawings.',
-    image: '/Muhorosteel.jpeg',
-    imageAlt: 'Structural steel sections',
+    image: '/Muhoro columns and pillars steel.jpeg',
+    imageAlt: 'Structural steel columns and pillars',
     keywords: ['structural steel buying guide', 'steel supply Juja', 'building materials planning'],
     publishedAt: '2026-01-14',
     sections: [

@@ -8,7 +8,7 @@ const images = [
   '/muhoro blue products.jpeg',
   '/Muhoro columns and pillars steel.jpeg',
   '/muhoro2.jpeg',
-  '/Muhoro iron sheets.jpeg',
+  '/Muhoromabati.jpeg',
   '/Muhoro cardboards.jpeg',
   '/Muhoro binding wire.jpeg',
 ]
